@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luzine | Moda Sustentável e Minimalista</title>
+    <style>
+        /* Paleta de Cores: #000 (Preto), #1E1E1E (Cinza Escuro), #38761D (Verde Escuro), #6AA84F (Verde Claro/Destaque) */
+        
+        :root {
+            --cor-principal: #000;          /* Preto (Fundo/Texto) */
+            --cor-destaque: #6AA84F;       /* Verde Claro (Botões/Destaque) */
+            --cor-secundaria: #1E1E1E;     /* Cinza Escuro (Navbar/Rodapé) */
+            --cor-texto-claro: #FFF;       /* Branco */
+            --cor-verde-escuro: #38761D;   /* Verde Escuro */
+        }
+
+        /* Estilos Globais e Reset */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--cor-principal);
+            color: var(--cor-texto-claro);
+            line-height: 1.6;
+        }
+
+        a {
+            color: var(--cor-destaque);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Cabeçalho (Header) */
+        header {
+            background-color: var(--cor-secundaria);
+            padding: 20px 0;
+            text-align: center;
+            border-bottom: 3px solid var(--cor-destaque);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: var(--cor-destaque);
+            letter-spacing: 5px;
+            text-transform: uppercase;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0 0 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: var(--cor-texto-claro);
+            font-weight: bold;
+            padding: 5px 10px;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: var(--cor-destaque);
+            text-decoration: none;
+        }
+
+        /* Seção Principal de Destaque */
+        .hero {
+            background-color: var(--cor-principal);
+            text-align: center;
+            padding: 100px 20px;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://via.placeholder.com/1200x500/38761D/FFFFFF?text=Imagem+de+Destaque');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero h2 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: var(--cor-destaque);
+            text-shadow: 1px 1px 3px var(--cor-principal);
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+
+        /* Botão de Chamada para Ação (CTA) - Geral */
+        .cta-button {
+            display: inline-block;
+            background-color: var(--cor-destaque);
+            color: var(--cor-principal);
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background-color 0.3s, transform 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            background-color: var(--cor-verde-escuro);
+            color: var(--cor-texto-claro);
+            transform: translateY(-2px); 
+            text-decoration: none;
+        }
+        
+        /* Seção de Produtos */
+        .produtos-grid {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .produtos-grid h3 {
+            color: var(--cor-destaque);
+            font-size: 2em;
+            margin-bottom: 30px;
+        }
+        
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .produto-item {
+            background-color: var(--cor-secundaria);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s;
+        }
+
+        .produto-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(106, 168, 79, 0.3);
+        }
+        
+        .produto-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+        
+        .produto-item h4 {
+            color: var(--cor-destaque);
+            margin: 10px 0;
+            font-size: 1.3em;
+        }
+
+        .produto-item .preco {
+            font-weight: bold;
+            font-size: 1.5em;
+            color: var(--cor-texto-claro);
+            margin-bottom: 15px;
+        }
+        
+        /* NOVO CSS: Seção de Contato WhatsApp */
+        .whatsapp-contato {
+            background-color: var(--cor-principal); /* Fundo Preto */
+            padding: 50px 20px;
+            text-align: center;
+            border-top: 2px solid var(--cor-destaque);
+        }
+
+        .whatsapp-contato h3 {
+            color: var(--cor-destaque);
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
+
+        .whatsapp-contato p {
+             font-size: 1.1em;
+             margin-bottom: 30px;
+        }
+
+        .whatsapp-button {
+            display: inline-block;
+            background-color: #25D366; /* Verde icônico do WhatsApp */
+            color: var(--cor-texto-claro);
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background-color 0.3s, transform 0.2s;
+            margin-top: 20px;
+            border: none;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+
+        .whatsapp-button:hover {
+            background-color: #128C7E; 
+            text-decoration: none;
+            transform: scale(1.05);
+        }
+        
+        .whatsapp-button span {
+            display: block;
+            font-size: 0.7em;
+            font-weight: normal;
+            margin-top: 5px;
+            text-transform: none;
+        }
+
+
+        /* Rodapé (Footer) */
+        footer {
+            background-color: var(--cor-secundaria);
+            color: var(--cor-texto-claro);
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+            border-top: 3px solid var(--cor-destaque);
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>LUZINE</h1>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#produtos">Produtos</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#contato">Contato (WhatsApp)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="inicio">
+        <h2>Ilumine Seu Estilo. Viva o Minimalismo.</h2>
+        <p>Descubra a coleção Luzine: peças atemporais, sustentáveis e feitas para durar.</p>
+        <a href="#produtos" class="cta-button">Ver Coleção Completa</a>
+    </section>
+
+    <section class="produtos-grid" id="produtos">
+        <h3>Nossos Destaques</h3>
+        <div class="grid-container">
+            
+            <div class="produto-item">
+                <img src="https://via.placeholder.com/300x200/38761D/FFFFFF?text=Produto+1" alt="Produto 1">
+                <h4>Camisa Minimalista (Verde)</h4>
+                <p class="preco">R$ 189,90</p>
+                <a href="#" class="cta-button" style="padding: 10px 20px; font-size: 0.9em;">Comprar</a>
+            </div>
+
+            <div class="produto-item">
+                <img src="https://via.placeholder.com/300x200/1E1E1E/FFFFFF?text=Produto+2" alt="Produto 2">
+                <h4>Calça Conforto (Preto)</h4>
+                <p class="preco">R$ 249,90</p>
+                <a href="#" class="cta-button" style="padding: 10px 20px; font-size: 0.9em;">Comprar</a>
+            </div>
+
+            <div class="produto-item">
+                <img src="https://via.placeholder.com/300x200/6AA84F/1E1E1E?text=Produto+3" alt="Produto 3">
+                <h4>Acessório Essencial</h4>
+                <p class="preco">R$ 79,90</p>
+                <a href="#" class="cta-button" style="padding: 10px 20px; font-size: 0.9em;">Comprar</a>
+            </div>
+
+        </div>
+    </section>
+    
+    <section class="whatsapp-contato" id="contato">
+        <h3>Precisa de Ajuda ou Quer Personalizar?</h3>
+        <p>Fale diretamente com nossa equipe de vendas e suporte.</p>
+        <a href="https://wa.me/5535998911405" target="_blank" class="whatsapp-button">
+            Chamar no WhatsApp
+            <span>(35) 99891-1405</span>
+        </a>
+    </section>
+
+
+    <footer>
+        <p>&copy; 2025 Luzine. Todos os direitos reservados.</p>
+        <p>Sustentabilidade e Design no seu dia a dia.</p>
+        <p><a href="#contato">Fale Conosco (WhatsApp)</a> | <a href="#termos">Termos de Uso</a></p>
+    </footer>
+
+</body>
+                                                      </html>
+                                                      

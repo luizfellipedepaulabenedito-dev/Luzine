@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luzine | Sua Loja Online</title>
+    <style>
+        /* Estilos básicos para legibilidade - DEVE ser movido para um arquivo CSS real */
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        header { background-color: #333; color: white; padding: 10px 20px; text-align: center; }
+        nav a { color: white; margin: 0 15px; text-decoration: none; }
+        .hero { background-color: #f4f4f4; padding: 50px 20px; text-align: center; }
+        .produtos { padding: 20px; text-align: center; }
+        .produto-item { border: 1px solid #ccc; padding: 15px; margin: 10px; display: inline-block; width: 250px; }
+        .produto-item button { background-color: #5cb85c; color: white; border: none; padding: 10px; cursor: pointer; }
+        footer { background-color: #333; color: white; text-align: center; padding: 10px 0; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Luzine</h1>
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#produtos">Produtos</a>
+            <a href="#ofertas">Ofertas</a>
+            <a href="#contato">Contato</a>
+            <a href="#carrinho">🛒 Carrinho (0)</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="inicio">
+        <h2>Bem-vindo à Luzine!</h2>
+        <p>Descubra as últimas tendências e produtos exclusivos.</p>
+        <a href="#produtos"><button>Compre Agora</button></a>
+    </section>
+
+    <section class="produtos" id="produtos">
+        <h2>Produtos em Destaque</h2>
+        
+        <div class="produto-item">
+            <h3>Produto A</h3>
+            <p>Descrição breve do Produto A. Qualidade e estilo garantidos.</p>
+            <p><strong>R$ 199,90</strong></p>
+            <button>Adicionar ao Carrinho</button>
+        </div>
+
+        <div class="produto-item">
+            <h3>Produto B</h3>
+            <p>Descrição breve do Produto B. A melhor escolha para você.</p>
+            <p><strong>R$ 49,50</strong></p>
+            <button>Adicionar ao Carrinho</button>
+        </div>
+
+        <div class="produto-item">
+            <h3>Produto C</h3>
+            <p>Descrição breve do Produto C. Não perca esta oferta!</p>
+            <p><strong>R$ 349,00</strong></p>
+            <button>Adicionar ao Carrinho</button>
+        </div>
+
+    </section>
+
+
+    
